@@ -1,17 +1,16 @@
 (function() {
-  var form = document.getElementsByClassName('form')[0];
-  var todosContainer = document.getElementsByClassName('todos')[0];
+  // form elements
+  var sendTodoInput = document.querySelector('.container .form input');
+  var sendTodoButton = document.querySelector('.container .form button');
 
-  var sendTodoInput = form.getElementsByTagName('input')[0];
-  var sendTodoButton = form.getElementsByTagName('button')[0];
-
-  var eachTodo = todosContainer.getElementsByClassName('todo')[0];
-  var checkboxInput = eachTodo.getElementsByTagName('input')[0];
+  // to-dos container elements
+  var todosContainer = document.querySelector('.container .todos');
+  var checkboxInput = document.querySelector('.container .todos .todo input');
 
   var createTodo = function(text) {
     // create html nodes
     var todoContainer = document.createElement('div');
-    todoContainer.setAttribute('class', 'todo unselected');
+    todoContainer.setAttribute('class', 'todo');
 
     var todoInput = document.createElement('input');
     todoInput.setAttribute('type', 'checkbox');
@@ -20,8 +19,8 @@
     todoText.innerText = text;
 
     // append nodes to the todo div
-    todoContainer.appendChild(todoInput);
-    todoContainer.appendChild(todoText);
+    var container = appendChildren(todoContainer);
+    container(todoInput, todoText);
 
     return todoContainer;
   };
@@ -43,6 +42,19 @@
 
   function onCompletedTodo() {
     console.log('right!')
+  }
+
+  // tools
+  function watchElementForChanges(elem) {
+    // if element changes do something
+  }
+
+  function appendChildren(container) {
+    return function() {
+      return Array.prototype.map.call(arguments, function (elem) {
+        container.appendChild(elem);
+      });
+    }
   }
 
   sendTodoButton.onclick = onCreateTodo;
