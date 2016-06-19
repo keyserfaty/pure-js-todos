@@ -1,5 +1,7 @@
 (function(library) {
   require('app/tools.js');
+
+  // this should go
   setTimeout(function () {
     library(tools);
   }, 10);
