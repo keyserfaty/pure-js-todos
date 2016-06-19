@@ -3,9 +3,9 @@ var require = function() {
   var head = document.getElementsByTagName('head')[0];
 
   //type checkers
-  var argAreStrings = function(arr) {
+  var argIsNotString = function(arr) {
     return Array.prototype.some.call(arr, function (elem) {
-      return typeof(elem) === 'string';
+      return typeof(elem) !== 'string';
     });
   };
 
@@ -22,7 +22,7 @@ var require = function() {
   };
 
   // fall backs
-  if (!argAreStrings(libs)) {
+  if (argIsNotString(libs)) {
     return fail('Require can only receive strings');
   }
 
