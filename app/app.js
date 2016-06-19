@@ -5,12 +5,6 @@
   }, 10);
 
 })(function (tools) {
-  // tools
-  var appendChildren = tools.appendChildren;
-  var createElemWithAttr = tools.createElemWithAttr;
-  var createElemWithClass = tools.createElemWithClass;
-  var createElemWithInnerText = tools.createElemWithInnerText;
-
   // select elements
   var sendTodoInput = document.querySelector('.container .form input');
   var sendTodoButton = document.querySelector('.container .form button');
@@ -19,12 +13,12 @@
 
   var createTodo = function(text) {
     // create html nodes
-    var todoContainer = createElemWithClass('div', 'todo');
-    var todoInput = createElemWithAttr('input', 'type', 'checkbox');
-    var todoText = createElemWithInnerText('span', text);
+    var todoContainer = tools.createElemWithClass('div', 'todo');
+    var todoInput = tools.createElemWithAttr('input', 'type', 'checkbox');
+    var todoText = tools.createElemWithInnerText('span', text);
 
     // append nodes to the to-do div
-    var container = appendChildren(todoContainer);
+    var container = tools.appendChildren(todoContainer);
     container(todoInput, todoText);
 
     return todoContainer;
