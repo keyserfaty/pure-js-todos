@@ -23,7 +23,7 @@ var require = function() {
 
   // fall backs
   if (argIsNotString(libs)) {
-    return fail('Require can only receive strings');
+    return fail('Arguments can only be strings');
   }
 
   if (!existy(libs)) {

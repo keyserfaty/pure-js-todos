@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87ca04a7-71c4-4ddf-be6d-086b1b4ec68d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/require.js" afterPath="$PROJECT_DIR$/app/require.js" />
     </list>
     <ignored path="pure-js-todos.iws" />
@@ -34,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -59,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="require.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="require.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/require.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="215">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -82,8 +81,8 @@
         <option value="$PROJECT_DIR$/tools.js" />
         <option value="$PROJECT_DIR$/app/tools.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app/require.js" />
         <option value="$PROJECT_DIR$/app/app.js" />
+        <option value="$PROJECT_DIR$/app/require.js" />
       </list>
     </option>
   </component>
@@ -218,12 +217,12 @@
       <workItem from="1465988743467" duration="415000" />
       <workItem from="1466025279246" duration="768000" />
       <workItem from="1466284914237" duration="11712000" />
-      <workItem from="1466309577412" duration="4683000" />
+      <workItem from="1466309577412" duration="4758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23535000" />
+    <option name="totallyTimeSpent" value="23610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="960" height="873" extended-state="0" />
@@ -325,18 +324,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/require.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/require.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
           <folding />
         </state>
       </provider>
