@@ -21,12 +21,7 @@
       if (mutation.target === todosContainer) {
         todosContainer = mutation.target;
         return Array.prototype.map.call(todosContainer.children, function (child) {
-          child.onclick = function() {
-            if (Array.prototype.indexOf.call(this.classList, 'selected') !== -1) {
-              return this.classList = ['todo'];
-            }
-            return this.classList.add('selected');
-          };
+          child.onclick = onTodoClick;
         });
       }
       return null;
@@ -67,6 +62,13 @@
 
     // remove content from input
     sendTodoInput.value = '';
+  }
+
+  function onTodoClick() {
+    if (Array.prototype.indexOf.call(this.classList, 'selected') !== -1) {
+      return this.classList = ['todo'];
+    }
+    return this.classList.add('selected');
   }
 
   sendTodoButton.onclick = onCreateTodo;
