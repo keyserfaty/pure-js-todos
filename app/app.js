@@ -43,11 +43,12 @@
     // create html nodes
     var todoContainer = tools.createElemWithClass('div', 'todo');
     var todoInput = tools.createElemWithAttr('input', 'type', 'checkbox');
+    var todoInputLabel = tools.createElemWithAttr('label', 'for', 'todo-check');
     var todoText = tools.createElemWithInnerText('span', text);
 
     // append nodes to the to-do div
     var container = tools.appendChildren(todoContainer);
-    container(todoInput, todoText);
+    container(todoInput, todoInputLabel, todoText);
 
     return todoContainer;
   };

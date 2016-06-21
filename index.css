@@ -1,0 +1,170 @@
+/* GT Walsheim Web Bold */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("./fonts/gt-walsheim-bold-web.eot");
+  src: url("./fonts/gt-walsheim-bold-web.eot?#iefix") format("embedded-opentype"), url("./fonts/gt-walsheim-bold-web.woff") format("woff"), url("./fonts/gt-walsheim-bold-web.ttf") format("truetype"), url("./fonts/gt-walsheim-bold-web.svg#gt_walsheim_medium") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+/* GT Walsheim Web Bold Italic */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("./fonts/gt-walsheim-bold-oblique-web.eot");
+  src: url("./fonts/gt-walsheim-bold-oblique-web.eot?#iefix") format("embedded-opentype"), url("./fonts/gt-walsheim-bold-oblique-web.woff") format("woff"), url("./fonts/gt-walsheim-bold-oblique-web.ttf") format("truetype"), url("./fonts/gt-walsheim-bold-oblique-web.svg#gt_walsheim_medium") format("svg");
+  font-weight: 600;
+  font-style: italic; }
+/* GT Walsheim Web Medium */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("./fonts/gt-walsheim-medium-web.eot");
+  src: url("./fonts/gt-walsheim-medium-web.eot?#iefix") format("embedded-opentype"), url("./fonts/gt-walsheim-medium-web.woff") format("woff"), url("./fonts/gt-walsheim-medium-web.ttf") format("truetype"), url("./fonts/gt-walsheim-medium-web.svg#gt_walsheim_medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+/* GT Walsheim Medium Italic */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("./fonts/gt-walsheim-regular-oblique-web.eot");
+  src: url("./fonts/gt-walsheim-regular-oblique-web.eot?#iefix") format("embedded-opentype"), url("./fonts/gt-walsheim-regular-oblique-web.woff") format("woff"), url("./fonts/gt-walsheim-regular-oblique-web.ttf") format("truetype"), url("./fonts/gt-walsheim-regular-oblique-web.svg#gt_walsheim_medium_oblique") format("svg");
+  font-weight: 500;
+  font-style: italic; }
+/* GT Walsheim Web Regular */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("./fonts/gt-walsheim-web.eot");
+  src: url("./fonts/gt-walsheim-web.eot?#iefix") format("embedded-opentype"), url("./fonts/gt-walsheim-web.woff") format("woff"), url("./fonts/gt-walsheim-web.ttf") format("truetype"), url("./fonts/gt-walsheim-web.svg#gt_walsheim_regular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+/* GT Walsheim Web Regular Italic */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("./fonts/gt-walsheim-regular-oblique-web.eot");
+  src: url("./fonts/gt-walsheim-regular-oblique-web.eot?#iefix") format("embedded-opentype"), url("./fonts/gt-walsheim-regular-oblique-web.woff") format("woff"), url("./fonts/gt-walsheim-regular-oblique-web.ttf") format("truetype"), url("./fonts/gt-walsheim-regular-oblique-web.svg#gt_walsheim_medium_oblique") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+/* GT Walsheim Light Italic */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("./fonts/gt-walsheim-light-oblique-web.eot");
+  src: url("./fonts/gt-walsheim-light-oblique-web.eot?#iefix") format("embedded-opentype"), url("./fonts/gt-walsheim-light-oblique-web.woff") format("woff"), url("./fonts/gt-walsheim-light-oblique-web.ttf") format("truetype"), url("./fonts/gt-walsheim-light-oblique-web.svg#gt_walsheim_regular_oblique") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("./fonts/gt-walsheim-light-web.eot");
+  src: url("./fonts/gt-walsheim-light-web.eot?#iefix") format("embedded-opentype"), url("./fonts/gt-walsheim-light-web.ttf") format("truetype"), url("./fonts/gt-walsheim-light-web.svg#gt_walsheim_regular_oblique") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+body {
+  position: relative;
+  background: black;
+  font-family: 'GT Walsheim';
+  font-size: larger;
+  color: white;
+  margin: 0;
+  border: 10px solid #1e1d1d;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+section.container {
+  position: absolute;
+  padding: 45px;
+  border-radius: 5px;
+  width: 600px;
+}
+
+.todo {
+  padding: 15px 0;
+  border-bottom: 5px solid #1e1d1d;
+  margin-top: 0px;
+}
+
+.todo span {
+  margin-left: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  border: none;
+}
+
+button.create-todo {
+  border: 1px solid;
+  background: none;
+  height: 30px;
+  width: 20%;
+  border-radius: 5px;
+  color: white;
+  font-family: GT Walsheim;
+  font-size: 13px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="text"] {
+  height: 30px;
+  width: 80%;
+  font-size: 16px;
+  border: none;
+  background: none;
+  border-left: 2px;
+  color: white;
+}
+
+.todo {
+  position: relative;
+  cursor: pointer;
+}
+
+.todo input[type=checkbox] {
+  visibility: hidden;
+}
+
+.todo input:checked + label:after {
+   opacity: 1;
+ }
+
+.todo label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  border-radius: 4px;
+  background: #1d1d1d;
+}
+
+.todo label:after {
+   content: '';
+   width: 9px;
+   height: 5px;
+   position: absolute;
+   top: 4px;
+   left: 4px;
+   border: 3px solid #fcfff4;
+   border-top: none;
+   border-right: none;
+   background: transparent;
+   opacity: 0;
+   transform: rotate(-45deg);
+ }
+
+.todo label:hover::after {
+   opacity: 0.3;
+ }
+
+.selected label:after {opacity: 1;}
+
+.selected span {
+  text-decoration: line-through;
+  color: #4d4d4d;
+}
+
+button.create-todo:hover {
+  background: white;
+  border: 1px solid white;
+  color: black;
+}
