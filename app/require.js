@@ -1,14 +1,5 @@
-var require = function() {
-  var libs = arguments;
-  var head = document.getElementsByTagName('head')[0];
-
+var require = function(urls, cb) {
   //type checkers
-  var argIsNotString = function(arr) {
-    return Array.prototype.some.call(arr, function (elem) {
-      return typeof(elem) !== 'string';
-    });
-  };
-
   var isEmpty = function(arg) {
     return arg.length === 0;
   };
@@ -19,38 +10,42 @@ var require = function() {
 
   var fail = function(err) {
     console.log(err);
+    cb(true);
   };
-
-  // fall backs
-  if (argIsNotString(libs)) {
-    return fail('Arguments can only be strings');
-  }
-
-  if (!existy(libs)) {
-    return fail('Arguments can not be null or undefined');
-  }
-
-  if (isEmpty(libs)) {
-    return fail('Arguments can not be empty');
-  }
 
   // lib
   var createScriptTag = function(url) {
     var script = document.createElement('script');
+    script.onload = function() { cb(null) };
     script.src = url;
     return script;
   };
 
-  var appendScriptTags = function(container) {
+  var appendScriptTags = function(script) {
     return function appendToContainer() {
-      return Array.prototype.map.call(arguments[0], function (elem) {
-        container.appendChild(createScriptTag(elem));
+      if (typeof arguments[0] === 'string') {
+        return script.parentNode.insertBefore(createScriptTag(arguments[0]), script);
+      }
+      return Array.prototype.map.call(arguments[0], function (url) {
+        if (typeof url !== 'string') return fail('Argument must be a string');
+        script.parentNode.insertBefore(createScriptTag(url), script);
       });
     }
   };
 
-  var container = appendScriptTags(head);
-  container(libs);
+  if (!existy(urls)) {
+    return fail('Arguments can not be null or undefined');
+  }
 
-  return null;
+  if (isEmpty(urls)) {
+    return fail('Arguments can not be empty');
+  }
+
+  if (typeof urls !== 'string' && !Array.isArray(urls)) {
+    return fail('Arguments can only be a string or an array of strings');
+  }
+
+  var script = document.getElementsByTagName('script')[0];
+  var formerScriptTag = appendScriptTags(script);
+  formerScriptTag(urls);
 };
