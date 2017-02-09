@@ -1,2 +1,2 @@
 # pure-js-todos 🍦
-A to-do list builded in vanilla js
+A to-do list built in vanilla js
